@@ -30,8 +30,8 @@ def test_signup(playwright:Playwright):
 
     # to get verification code from mail
     match=""
-    user_email = "z70335158@gmail.com"
-    password = "yxkb iwkt srgc xqjc"  # use Gmail App Password if 2FA enabled
+    user_email = "your email"
+    password = "your 16 digit password"  # use Gmail App Password if 2FA enabled
     IMAP_SERVER = "imap.gmail.com"
 
     mail = imaplib.IMAP4_SSL(IMAP_SERVER)
@@ -77,7 +77,8 @@ def test_signup(playwright:Playwright):
     page.get_by_placeholder("Enter an approximate number.").fill("100")
     page.get_by_placeholder("E.g., Undergraduate admissions to Canada.").fill("+2")
     page.get_by_placeholder("E.g., 90% ").fill("75")
-    page.locator("//button[@id='«r8b»-form-item']").click()
+    page.locator("(//input[@type='checkbox'])[1]").click(force=True)
+    page.get_by_label("Career Counseling", exact=True).check(force=True)
     page.get_by_role("button", name="Next").click()
     time.sleep(3)
 
