@@ -1,7 +1,9 @@
 1.Project Name : Signup Automation Script.
 
+
 2.Project Description:This project automates the signup process on a website or web application.
 Instead of filling out all the fields (like name, email, password, etc.) manually, this script automatically does it for you using browser automation tools.
+
 
 3.Tools & Technologies Used: 
 
@@ -12,6 +14,7 @@ b.Playwright– for browser automation.
 c.Pytest– for testing the script.
 
 d.PyCharm- IDE used to write and run the script.
+
 
 4.How it Works:
 
@@ -24,6 +27,7 @@ d.PyCharm- IDE used to write and run the script.
 -It submits the form.
 
 -Finally, it checks if signup was successful and saves the result in a report.
+
 
 5.How to run the Project:
 -Install Python.
@@ -40,6 +44,7 @@ cd signup_automation_task
   python signup_automation_script.py
 
 -After running, check the PDF report and  demo video for results.
+
 
 6.Expected Output:
 
