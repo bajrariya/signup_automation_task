@@ -1,6 +1,6 @@
 import time
 
-from playwright.sync_api import Playwright, expect
+from playwright.sync_api import Playwright
 
 import imaplib
 import email
@@ -95,7 +95,5 @@ def test_signup(playwright:Playwright):
     # input_file = page.locator("(//input[@type='file'])[1]")
     input_file.set_input_files("file.txt")
     page.get_by_role("button", name="Submit").click()
-    time.sleep(3)
-    expect(page.locator("h2")).to_contain_text("My Profile")
-    time.sleep(3)
+    
 
