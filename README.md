@@ -1,8 +1,7 @@
 Project Name : Signup Automation Script.
 
-Project Description:
--This project automates the signup process on a website or web application. 
--Instead of filling out all the fields (like name, email, password, etc.) manually, this script automatically does it for you using browser automation tools.
+Project Description:This project automates the signup process on a website or web application.
+Instead of filling out all the fields (like name, email, password, etc.) manually, this script automatically does it for you using browser automation tools.
 
 Tools & Technologies Used: 
 a.Python– main programming language.
