@@ -20,8 +20,8 @@ def test_signup(playwright:Playwright):
     # set up your account section
     page.get_by_placeholder("Enter Your First Name").fill("Demo")
     page.get_by_placeholder("Enter Your Last Name").fill("Testing")
-    page.get_by_placeholder("Enter Your Email Address").fill("z70335158++++++++++++@gmail.com")
-    page.get_by_placeholder("00-00000000").fill("9852242238")
+    page.get_by_placeholder("Enter Your Email Address").fill("your email address")
+    page.get_by_placeholder("00-00000000").fill("your phone number")
     page.get_by_placeholder("******************").nth(0).fill("Password@123")
     page.get_by_placeholder("******************").nth(1).fill("Password@123")
     page.get_by_role("button", name="Next").click()
