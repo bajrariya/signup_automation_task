@@ -10,10 +10,15 @@ c.Pytest– for testing the script.
 d.PyCharm- IDE used to write and run the script.
 
 How it Works:
+
 -The script opens a browser (like Chrome or Edge).
+
 -It goes to the website’s signup page.
+
 -It fills in the registration details automatically.
+
 -It submits the form.
+
 -Finally, it checks if signup was successful and saves the result in a report.
 
 How to run the Project:
