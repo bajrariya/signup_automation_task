@@ -91,8 +91,8 @@ def test_signup(playwright:Playwright):
     page.locator("svg.lucide.lucide-chevron-down").click()
     page.get_by_role("checkbox").first.click()
 
-    input_file = page.locator("//div[@class='flex justify-between gap-6 w-full flex-wrap']//div[1]//div[1]//input[1]")
-    # input_file = page.locator("(//input[@type='file'])[1]")
+    
+    input_file = page.locator("(//input[@type='file'])[1]")
     input_file.set_input_files("file.txt")
     page.get_by_role("button", name="Submit").click()
     
