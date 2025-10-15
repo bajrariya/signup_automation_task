@@ -8,6 +8,7 @@ Tools & Technologies Used:
 a.Python– main programming language.
 b.Playwright– for browser automation.
 c.Pytest– for testing the script.
+d.PyCharm- IDE used to write and run the script.
 
 How it Works:
 -The script opens a browser (like Chrome or Edge).
