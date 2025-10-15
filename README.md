@@ -1,9 +1,9 @@
-Project Name : Signup Automation Script.
+1.Project Name : Signup Automation Script.
 
-Project Description:This project automates the signup process on a website or web application.
+2.Project Description:This project automates the signup process on a website or web application.
 Instead of filling out all the fields (like name, email, password, etc.) manually, this script automatically does it for you using browser automation tools.
 
-Tools & Technologies Used: 
+3.Tools & Technologies Used: 
 
 a.Python– main programming language.
 
@@ -13,7 +13,7 @@ c.Pytest– for testing the script.
 
 d.PyCharm- IDE used to write and run the script.
 
-How it Works:
+4.How it Works:
 
 -The script opens a browser (like Chrome or Edge).
 
@@ -25,13 +25,12 @@ How it Works:
 
 -Finally, it checks if signup was successful and saves the result in a report.
 
-How to run the Project:
-- Install Python.
+5.How to run the Project:
+-Install Python.
 
-- Clone or download this Project.
+-Clone or download this Project.
 
 gitclone https://github.com/bajrariya/signup_automation_task
-
 cd signup_automation_task
 
 -Install the required packages
@@ -42,7 +41,7 @@ cd signup_automation_task
 
 -After running, check the PDF report and  demo video for results.
 
- Expected Output:
+6.Expected Output:
 
 -The signup form should be filled automatically.
 
