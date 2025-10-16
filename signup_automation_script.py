@@ -1,6 +1,6 @@
 import time
 
-from playwright.sync_api import Playwright
+from playwright.sync_api import Playwright, expect
 
 import imaplib
 import email
@@ -10,28 +10,27 @@ def test_signup(playwright:Playwright):
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
     page.goto("https://authorized-partner.netlify.app/login")
-
-    page.get_by_role("link", name="Sign Up").click()
     time.sleep(1)
+    page.get_by_role("link", name="Sign Up").click()
     page.locator("#remember").click()
     page.get_by_role("button", name="Continue").click()
     time.sleep(3)
-
+    first_name = "Demo"
     # set up your account section
-    page.get_by_placeholder("Enter Your First Name").fill("Demo")
+    page.get_by_placeholder("Enter Your First Name").fill(first_name)
     page.get_by_placeholder("Enter Your Last Name").fill("Testing")
     page.get_by_placeholder("Enter Your Email Address").fill("your email address")
     page.get_by_placeholder("00-00000000").fill("your phone number")
     page.get_by_placeholder("******************").nth(0).fill("Password@123")
     page.get_by_placeholder("******************").nth(1).fill("Password@123")
     page.get_by_role("button", name="Next").click()
-    time.sleep(10)
+    time.sleep(7)
 
 
     # to get verification code from mail
     match=""
-    user_email = "your email"
-    password = "your 16 digit password"  # use Gmail App Password if 2FA enabled
+    user_email = "email"
+    password = "pass"  # use Gmail App Password if 2FA enabled
     IMAP_SERVER = "imap.gmail.com"
 
     mail = imaplib.IMAP4_SSL(IMAP_SERVER)
@@ -77,8 +76,7 @@ def test_signup(playwright:Playwright):
     page.get_by_placeholder("Enter an approximate number.").fill("100")
     page.get_by_placeholder("E.g., Undergraduate admissions to Canada.").fill("+2")
     page.get_by_placeholder("E.g., 90% ").fill("75")
-    page.locator("(//input[@type='checkbox'])[1]").click(force=True)
-    page.get_by_label("Career Counseling", exact=True).check(force=True)
+    page.get_by_role("checkbox").first.click()
     page.get_by_role("button", name="Next").click()
     time.sleep(3)
 
@@ -90,10 +88,12 @@ def test_signup(playwright:Playwright):
     page.get_by_text("Australia").click()
     page.locator("svg.lucide.lucide-chevron-down").click()
     page.get_by_role("checkbox").first.click()
-
-    
-    input_file = page.locator("(//input[@type='file'])[1]")
+    page.get_by_placeholder("E.g., ICEF Certified Education Agent").fill("Certificate")
+    input_file = page.locator("(//input[@type='file'])[1]").first
     input_file.set_input_files("file.txt")
-    page.get_by_role("button", name="Submit").click()
-    
 
+
+    page.get_by_role("button", name="Submit").click()
+    time.sleep(7)
+    expect(page.locator(f"xpath=//div[text() = '{first_name}']"))
+    time.sleep(3)
