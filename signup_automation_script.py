@@ -19,8 +19,8 @@ def test_signup(playwright:Playwright):
     # set up your account section
     page.get_by_placeholder("Enter Your First Name").fill(first_name)
     page.get_by_placeholder("Enter Your Last Name").fill("Testing")
-    page.get_by_placeholder("Enter Your Email Address").fill("your email address")
-    page.get_by_placeholder("00-00000000").fill("your phone number")
+    page.get_by_placeholder("Enter Your Email Address").fill("z70335158+46@gmail.com")
+    page.get_by_placeholder("00-00000000").fill("9846258040")
     page.get_by_placeholder("******************").nth(0).fill("Password@123")
     page.get_by_placeholder("******************").nth(1).fill("Password@123")
     page.get_by_role("button", name="Next").click()
@@ -29,8 +29,8 @@ def test_signup(playwright:Playwright):
 
     # to get verification code from mail
     match=""
-    user_email = "email"
-    password = "pass"  # use Gmail App Password if 2FA enabled
+    user_email = "z70335158@gmail.com
+    password = "yxkb iwkt srgc xqjc"  # use Gmail App Password if 2FA enabled
     IMAP_SERVER = "imap.gmail.com"
 
     mail = imaplib.IMAP4_SSL(IMAP_SERVER)
